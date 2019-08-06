@@ -33,7 +33,7 @@ class logistic_classifier(object):
         for i in range(self.num_iter):
             z = np.dot(X, self.theta)
             h = self.sigmoid(z)
-            gradient = np.dot(X.T, (h-y)) / y.size
+            gradient = np.dot(X.T, (h-y))
             self.theta -= self.lr * gradient
 
     def predict_prob(self, X):
