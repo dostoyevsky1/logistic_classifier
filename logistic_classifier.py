@@ -1,6 +1,6 @@
 """
 Created on Tue Aug  6 09:06:05 2019
-@author: mdrozdov
+@author: mdrozdov -- dostoyevsky1
 """
 ### Logistic Classifier
 
@@ -51,6 +51,6 @@ X = iris.data[:, :2]
 y = (iris.target != 0) * 1
 
 model = logistic_classifier(lr = 0.1)
-%time model.fit(X, y)
+model.fit(X,y)
 
 accuracy_score(y, model.predict(X, threshold = 0.5))
